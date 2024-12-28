@@ -2,11 +2,14 @@
 import os
 from dotenv import load_dotenv
 load_dotenv()
+import phi.api
+import phi
+from phi.playground import Playground,serve_playground_app
 from phi.agent import Agent
 from phi.model.groq import Groq
 from phi.tools.yfinance import YFinanceTools
 from phi.tools.duckduckgo import DuckDuckGo
-os.environ["GROQ_API_KEY"]=os.getenv("GROQ_API_KEY")
+phi.api=os.getenv("PHI_API_KEY")
 
 # Web search agent
 web_search_agent=Agent(
@@ -38,5 +41,7 @@ Multi_AI_Agent=Agent(
     markdown=True
 )
 
-# To get response using Agents
-Multi_AI_Agent.print_response("Summarize analyst recommendation and share the latest news for NVDA",stream=True)
+# Playground app to run in phidata cloud
+app=Playground(agents=[finance_agent,web_search_agent]).get_app()
+if __name__=="__main__":
+    serve_playground_app("playground:app",reload=True)

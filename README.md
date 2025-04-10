@@ -1,7 +1,7 @@
 # 💸 Monetara
 Finance assistant bot
      
-This project demonstrates the implementation of AI agents for finance and web search tasks using the phi API. The agents are designed to perform specific tasks such as fetching financial data and conducting web searches. A multi-agent system is also included to enable collaboration between the agents. The project is packaged as a Playground app that can be locally hosted in the phidata cloud.
+This project demonstrates the implementation of AI agents for finance and web search tasks using the Agno SDK. The agents are designed to perform specific tasks such as fetching financial data and conducting web searches. A multi-agent system is also included to enable collaboration between the agents. The project is packaged as a Playground app that can be locally hosted via Agno cloud.
 
 
 ## 🚀 Features
@@ -26,7 +26,7 @@ This project demonstrates the implementation of AI agents for finance and web se
     - Outputs results in tables and Markdown. 
 
 ### 4. Playground App
-- Purpose: Runs the agents in a web application interface hosted on the phidata cloud.      
+- Purpose: Runs the agents in a web application interface hosted on the Agno cloud.      
 - Features:
     - Interactive agent execution.
     - Real-time tool calls and responses.
@@ -45,17 +45,17 @@ git clone https://github.com/Akashvarma26/Monetara.git
 pip install -r requirements.txt
 ```
 3. Set Up Environment Variables:
-Create a .env file in the root directory and add the phi API key in this file.
+Create a .env file in the root directory and add the Agno API key as shown in .env.example file to this file.
 4. Run the file 
 ```
 python playground.py
 ```
-5. Open phidata website and check your application in playground tab.
+5. Open Agno.com website and check your application in playground tab.
 
 ## 🛠️ Key Technologies
 
-- PHI API: Powers the AI agents.
+- Agno API: Powers the AI agents.
 - Groq Models: High-performance AI models for agent tasks.
 - YFinanceTools: Fetches financial data from Yahoo Finance.
 - DuckDuckGo Tools: Performs web searches with source attribution.
-- Phidata Cloud: Hosts the playground application.
+- Agno Cloud: Hosts the playground application.

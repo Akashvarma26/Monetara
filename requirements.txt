@@ -1,9 +1,7 @@
-phidata
+agno
 python-dotenv
 yfinance
-packaging
+groq
 duckduckgo-search
 fastapi
 uvicorn
-groq
-openai
